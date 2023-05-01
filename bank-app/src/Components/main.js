@@ -119,7 +119,7 @@ function Main() {
                       src="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png"
                       className="card-img-top"
                     />
-                    <div className="card-body">
+                    <div className="d-flex flex-column card-body">
                       <h3 className="card-text">User Name : {user.username}</h3>
                       <ul className="list-group">
                         <li className="list-group-item"> ID: {user.counter}</li>
@@ -130,6 +130,9 @@ function Main() {
                           Account Type : {user.accountype}
                         </li>
                       </ul>
+                      <button type="submit" className="btn btn-dark">
+                        Delete
+                      </button>
                     </div>
                   </div>
                 </div>
