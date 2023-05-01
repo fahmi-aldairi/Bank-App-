@@ -51,6 +51,13 @@ function Main() {
     setusename("");
   };
 
+  const handleRemove = (id) => {
+    const updateUsers = users.filter((person) => person.counter !== id);
+    setCounter(counter - 1);
+    setUsers(updateUsers);
+    // console.log(updateUsers);
+  };
+
   return (
     <div style={mystyle}>
       <main style={{}}>
@@ -130,7 +137,11 @@ function Main() {
                           Account Type : {user.accountype}
                         </li>
                       </ul>
-                      <button type="submit" className="btn btn-dark">
+                      <button
+                        type="submit"
+                        className="btn btn-dark"
+                        onClick={() => handleRemove(user.counter)}
+                      >
                         Delete
                       </button>
                     </div>
