@@ -53,7 +53,7 @@ function Main() {
 
   const handleRemove = (id) => {
     const updateUsers = users.filter((person) => person.counter !== id);
-    setCounter(counter - 1);
+    // setCounter(counter - 1);
     setUsers(updateUsers);
     // console.log(updateUsers);
   };
@@ -74,6 +74,8 @@ function Main() {
                   name="username"
                   onChange={handleChangeUserName}
                   value={username}
+                  required
+                  
                 />
               </div>
               <div className="mb-3">
@@ -85,6 +87,7 @@ function Main() {
                   name="accountnumber"
                   onChange={handleChangeAccountNumber}
                   value={accountnumber}
+                  required
                 />
               </div>
               <div className="mb-3">
@@ -94,10 +97,11 @@ function Main() {
                 <select
                   className="form-select fs-5"
                   name="accountype"
-                  required
                   onChange={handleChangeAccountType}
                   value={accountype}
+                  required
                 >
+                  <option style={{display:"none"}}>Account Type</option>
                   <option>Savings</option>
                   <option>Student accounts</option>
                   <option>Third choice</option>
